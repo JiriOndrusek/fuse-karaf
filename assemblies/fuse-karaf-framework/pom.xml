@@ -126,6 +126,8 @@
                                         <include>data/**</include>
                                         <include>etc/**</include>
                                         <include>lib/**/README</include>
+                                        <!-- required to run on jdk 9+ -->
+                                        <include>lib/jdk9plus/**</include>
                                     </includes>
                                     <excludes>
                                         <exlude>etc/equinox-debug.properties</exlude>
