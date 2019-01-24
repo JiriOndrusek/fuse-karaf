@@ -486,6 +486,10 @@
                         <!-- Bouncy Castle libraries are already added to org.osgi.framework.bootdelegation property -->
                         <library>mvn:org.bouncycastle/bcprov-jdk15on/${version.org.bouncycastle};type:=extension;export:=true;delegate:=false</library>
                         <library>mvn:org.bouncycastle/bcpkix-jdk15on/${version.org.bouncycastle};type:=extension;export:=true;delegate:=false</library>
+                        <!-- lib/jdk9plus -->
+                        <!-- Bouncy Castle libraries for jdk9+ have to be also in lib/jdk9plus (because lib/ext is ignored)-->
+                        <library>mvn:org.bouncycastle/bcprov-jdk15on/${version.org.bouncycastle};type:=jdk9plus;export:=true;delegate:=false</library>
+                        <library>mvn:org.bouncycastle/bcpkix-jdk15on/${version.org.bouncycastle};type:=jdk9plus;export:=true;delegate:=false</library>
                         <!-- lib/endorsed -->
                         <library>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.xerces/${version.org.apache.servicemix.bundles.xerces};type:=endorsed;export:=true;delegate:=true</library>
                         <library>mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.jaxp-api-1.4/${version.org.apache.servicemix.specs};type:=endorsed;export:=true</library>
